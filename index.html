@@ -1,41 +1,423 @@
-<!doctype html>
-<html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<title>Video in Email Test</title>
-<style type="text/css">
- .video-wrapper {display:none;}
- @media (-webkit-min-device-pixel-ratio: 0) and (min-device-width:1024px) 
- {
-  .video-wrapper { display:block!important; }
-  .video-fallback { display:none!important; }
- }
-  @supports (-webkit-overflow-scrolling:touch) and (color:#ffffffff) {
-    div[class^=video-wrapper] { display:block!important; }
-    div[class^=video-fallback] { display:none!important; }
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!--<![endif]-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title></title>
+  <style type="text/css">
+
+
+
+
+
+.h1, .h2, .h3, .h4, .h5, .h6, p {
+  Margin:0;
+}
+
+
+body {
+  Margin: 0;
+  padding: 0;
+  min-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color:#ededed;
+}
+table {
+  border-spacing: 0;
+  font-family: sans-serif;
+  color: #333333;
+}
+td {
+  padding: 0;
+}
+img {
+  border: 0;
+  display:block;
+}
+
+.wrapper {
+  width: 100%;
+  table-layout: fixed;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  padding-top:10px;
+}
+.webkit {
+  max-width: 600px;
+}
+.outer { 
+  Margin: 0 auto;
+  width: 100%;
+  max-width: 600px;
+}
+.inner {
+  padding: 10px;
+}
+.contents {
+  width: 100%;
+}
+
+
+.two-column {
+  text-align: center;
+  font-size: 0;
+}
+.two-column .column {
+  width: 100%;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+}
+.two-column .contents {
+  font-size: 14px;
+  text-align: left;
+}
+
+
+.three-column {
+  text-align: center;
+  font-size: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.three-column .column {
+  width: 100%;
+  max-width: 200px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+.left-sidebar {
+  text-align: center;
+  font-size: 0;
+}
+.left-sidebar .column {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.left-sidebar .left {
+  max-width: 100px;
+}
+.left-sidebar .right {
+  max-width: 500px;
+}
+
+
+.right-sidebar {
+  text-align: center;
+  font-size: 0;
+}
+.right-sidebar .column {
+  width: 100%;
+  display: inline-block;
+  vertical-align: middle;
+}
+.right-sidebar .left {
+  max-width: 100px;
+}
+.right-sidebar .right {
+  max-width: 500px;
+}
+
+
+
+
+.preheader {
+  display:none !important;
+}
+
+
+
+p {
+  Margin: 0;
+}
+.h1 {
+  font-size: 21px;
+  font-weight: bold;
+  padding-bottom: 18px;
+  font-family: 'Arvo', helvetica, sans-serif;
+}
+.h2 {
+  font-size: 18px;
+  font-weight: bold;
+  Margin-bottom: 12px;
+}
+a {
+  color: #ee6a56;
+  text-decoration: underline;
+}
+
+
+
+.header {
+}
+.header .contents {
+  text-align: center;
+}
+.header p {
+  font-size: 12px;
+  Margin-top: 6px;
+  Margin-bottom: 0px;
+}
+.header .header-anchor {
+  color:#000000;
+  text-decoration:none;
+}
+
+
+
+.footer {
+  width:600px;
+  max-width:100%;
+  Margin:0 auto;
+}
+.footer .contents {
+  text-align: center;
+}
+.footer p {
+  font-size: 10px;
+  Margin-top: 0px;
+  Margin-bottom: 10px;
+}
+.footer .footer-anchor {
+  color:black;
+}
+
+
+
+.one-column img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+}
+
+
+
+.two-column img {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+.two-column .text {
+  padding-top: 10px;
+}
+
+
+
+.three-column img {
+  width: 100%;
+  max-width: 180px;
+  height: auto;
+}
+.three-column .contents {
+  font-size: 14px;
+  text-align: center;
+}
+.three-column .text {
+  padding-top: 10px;
+}
+
+
+
+.left-sidebar img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+}
+.left-sidebar .contents {
+  font-size: 14px;
+  text-align: center;
+}
+.left-sidebar a {
+  color: #85ab70;
+}
+
+
+
+.right-sidebar img {
+  width: 100%;
+  max-width: 80px;
+  height: auto;
+}
+.right-sidebar .contents {
+  font-size: 14px;
+  text-align: center;
+}
+.right-sidebar a {
+  color: #70bbd9;
+}
+
+
+
+.button {
+  font-size: 24px;
+  font-family: helvetica, sans-serif;
+  color: #ffffff !important;
+  text-decoration: none;
+  background-color: #000000;
+  border-top: 12px solid #000000;
+  border-bottom: 12px solid #000000;
+  width:150px;
+  max-width:100%;
+  display: inline-block;
+  margin:4px auto 0px;
+}
+
+
+@media screen and (max-width: 400px) {
+  .two-column .column,
+  .three-column .column {
+    max-width: 100% !important;
   }
-  #MessageViewBody .video-wrapper { display:block!important; }
-  #MessageViewBody .video-fallback { display:none!important; }
-</style>
+  .two-column img {
+    max-width: 100% !important;
+  }
+  .three-column img {
+    max-width: 50% !important;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 620px) {
+  .three-column .column {
+    max-width: 33% !important;
+  }
+  .two-column .column {
+    max-width: 50% !important;
+  }
+}
+  </style>
+  <!--[if (gte mso 9)|(IE)]>
+    <style type="text/css">
+      table {border-collapse: collapse !important;}
+    </style>
+  <![endif]-->
+
 </head>
-<body>
-<B>Video in Email Test</B><BR>
+<body style="Margin:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;min-width:100%;margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;background-color:#ededed;" >
+  <span class="preheader" style="display:none !important;" >
+    LinkedIn Learning Overview
+  </span>
 
-<!-- video section -->
-<div class="video-wrapper" style="display:none;">
-  <p>Video Content</p>
-<video width="320" height="176" controls="controls"  poster="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny_cover.jpg" src="http://www.w3schools.com/html/mov_bbb.mp4" >
-      <!-- fallback 1 -->
-      <a href="http://www.emailonacid.com" ><img height="176" 
-        src="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny-fallback.jpg" width="320" /></a>
-</video>
-</div>
+<!-- *******
+  Inner wrapper openings for centered table
+-->
+  <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding-top:10px;" >
+    <div class="webkit" style="max-width:600px;" >
+      <!--[if (gte mso 9)|(IE)]>
+      <table width="600" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >
+      <tr>
+      <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+      <![endif]-->
+      <table class="outer" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;Margin:0 auto;width:100%;max-width:600px;" >
+<!-- end inner wrap opening -->
 
-<!-- fallback section -->
-<div class="video-fallback">
-  <p>Fallback Content</p>
-  <a href="http://www.emailonacid.com" ><img height="176" 
-    src="https://www.emailonacid.com/images/blog_images/Emailology/2013/html5_video/bunny-fallback.jpg" width="320" /></a>
-</div>
+<!--
+  Single Column image
+-->
+                <tr>
+                      <td class="one-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                        <img src="https://github.com/jevellacebedo/html-email-video-test/blob/master/top" width="600" alt="Holiday cheer and a happy new year from the Bently Reserve events team!" style="border-width:0;display:block;width:100%;max-width:600px;height:auto;" />
+                      </td>
+                </tr>
+<!-- End Single Column image -->
+<!--
+  Single Column image
+-->
+                <tr>
+                      <td class="one-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                        <a href="http://bentlyreserve.com" style="color:#ee6a56;text-decoration:underline;" ><img src="https://github.com/jevellacebedo/html-email-video-test/blob/master/middle.png" width="600" alt="The Bently Reserve. 301 Battery Street San Francisco, CA 94111. 415-294-2226. Bentlyreserve.com" style="border-width:0;display:block;width:100%;max-width:600px;height:auto;" /></a>
+                      </td>
+                </tr>
+<!-- End Single Column image -->
+<!--
+  Single Column image
+-->
+                <tr>
+                      <td class="one-column" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                        <a href="http://www.juliemikos.com" style="color:#ee6a56;text-decoration:underline;" ><img src="https://github.com/jevellacebedo/html-email-video-test/blob/master/fallback.png" width="600" alt="Photograph by Julie Mikos" style="border-width:0;display:block;width:100%;max-width:600px;height:auto;" /></a>
+                      </td>
+                </tr>
+<!-- End Single Column image -->
+<!-- *******
+    Read Online Banner
+-->
+                <tr class="header">
+                    <td class="header-center" style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+                        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;" >
+                            <tr>
+                                <td class="inner contents" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;width:100%;text-align:center;" >
+                                    <p style="Margin:0;font-size:12px;Margin-top:6px;Margin-bottom:0px;" ><a class="header-anchor" href="https://github.com/jevellacebedo/html-email-video-test/blob/master/bottom.png" style="color:#000000;text-decoration:none;" ><font color=''>Having trouble reading this? View it online!</font></a></p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+<!-- end read online banner -->
 
+<!-- *******
+  Begin closing Inner wrapper openings for centered table
+-->
+      </table>
+      <!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </div>
+  </center>
+<!-- end inner wrapping closing tags -->
+
+
+<!-- *******
+  Inner wrapper openings for centered table
+-->
+  <center class="wrapper" style="width:100%;table-layout:fixed;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;padding-top:10px;" >
+    <div class="webkit" style="max-width:600px;" >
+      <!--[if (gte mso 9)|(IE)]>
+      <table width="600" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;" >
+      <tr>
+      <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+      <![endif]-->
+      <table class="outer" align="center" style="border-spacing:0;font-family:sans-serif;color:#333333;Margin:0 auto;width:100%;max-width:600px;" >
+<!-- end inner wrap opening -->
+<!-- *******
+  Begin Footer
+-->
+  <table class="footer" style="border-spacing:0;font-family:sans-serif;color:#333333;width:600px;max-width:100%;Margin:0 auto;" >
+    <tr>
+      <td style="padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;" >
+        <table width="100%" style="border-spacing:0;font-family:sans-serif;color:#333333;" >
+          <tr>
+            <td class="inner contents" style="padding-top:10px;padding-bottom:10px;padding-right:10px;padding-left:10px;width:100%;text-align:center;" >
+              <div class="unsubscribe">
+              <unsubscribe>
+                <p class="unsubscribe-text" style="Margin:0;font-size:10px;Margin-top:0px;Margin-bottom:10px;" >We&rsquo;d hate to see you go, but you can unsubscribe here.</p>
+              </unsubscribe>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+<!-- end footer -->
+<!-- *******
+  Begin closing Inner wrapper openings for centered table
+-->
+      </table>
+      <!--[if (gte mso 9)|(IE)]>
+      </td>
+      </tr>
+      </table>
+      <![endif]-->
+    </div>
+  </center>
+<!-- end inner wrapping closing tags -->
 </body>
 </html>
